@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,div{
+            margin:0;
+            padding:0;
+        }
+        #d1{
+            width:500px;
+            height: 400px;
+            border: 2px solid #00FFD1;
+        }
+    </style>
+    <script type="text/javascript" src="./drag.js">
+    </script>
+</head>
+<body>
+<div id="d1">
+    <canvas id="myCanvas" width="500" height="400">
+        <p>not supported!</p>
+    </canvas>
+</div>
+
+<script>
+    const canvas=document.getElementById("myCanvas");
+
+    var cimg = canvas.newCanvasImage("https://cdn.discordapp.com/attachments/691637836318900255/1030392183091630090/1.png");
+    cimg.setSize(300,200);
+    cimg.show();
+    cimg.addMoveEvent();
+
+</script>
+</body>
+</html>
