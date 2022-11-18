@@ -53,7 +53,7 @@ class DrawJson():
       fh.write(js)
       fh.close()
 
-class MakeRect():
+class Rect():
    def __init__(self, xy, width, height, **kwargs):
       self.x = xy[0]
       self.y = xy[1]
@@ -76,10 +76,18 @@ class MakeRect():
    def makejson(self):
       return json.dumps(self.__dict__)
 
-# class Rects():
-#    def __init__(self):
-#
-#    def append(self,id:int, r:MakeRect):
+def MakeRect(xy, width, height, **kwargs):
+   return Rect(xy, width, height, **kwargs).makejson()
+
+class Rects():
+   def __init__(self):
+      self.rects = []
+      self.amount = 0
+   def addRect(self,num,xy, width, height, **kwargs):
+      while self.amount <= num:
+         self.rects.append([])
+         self.amount += 1
+      self.rects[num].append(MakeRect(xy, width, height, **kwargs))
 
 
 
@@ -111,7 +119,10 @@ class ImageHandler():
          else:
             self.titlelist = [''] * len(args)
       if 'rect' in kwargs:
-         self.rectlist = json.loads(json.dumps(kwargs['rect'][:]))
+         self.rectlist = json.loads(json.dumps(kwargs['rect'].rects[:]))
+         print(self.rectlist)
+         print(type(kwargs['rect']))
+
 
       PageJson(imglist = self.imglist, titlelist = self.titlelist, mode = '1', layout = '1',rectlist=self.rectlist).saveJson("./static/json/"+self.jsonhandle+".json")
 
@@ -137,7 +148,9 @@ class ImageHandler():
                raise RuntimeError('title should be a list of strings')
             elif len(kwargs['title'])!=len(args):
                print('title list mismatch with images')
-
+      if 'rect' in kwargs:
+         if len(kwargs['rect'].rects) > len(args):
+            raise RuntimeError('too many rectangles')
 
 
 

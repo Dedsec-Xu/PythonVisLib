@@ -20,11 +20,12 @@ im4 = ndimage.affine_transform(im, H[:2,:2],(H[0,2],H[1,2]))
 
 # vis.showimgs(im1,im2,im1,im2)
 titles = ['cat1','cat2','dog','dog2']
-rect1 = vis.MakeRect([67,40],147,147,linewidth = 3).makejson()
-rect2 = vis.MakeRect([87,130],93,18,edgecolor = 'w').makejson()
-rect3 = vis.MakeRect([56,63],189,188,edgecolor = 'g',linewidth = 3).makejson()
-rect4 = vis.MakeRect([120,27],66,55,edgecolor = 'cyan',linewidth = 1).makejson()
-rect5 = vis.MakeRect([62,49],152,114,edgecolor = 'm',linewidth = 5).makejson()
+# rectss.addRect(0,[67,40],147,14)
+rect1 = vis.MakeRect([67,40],147,14)
+rect2 = vis.MakeRect([87,130],93,18,edgecolor = 'w')
+rect3 = vis.MakeRect([56,63],189,188,edgecolor = 'g',linewidth = 3)
+rect4 = vis.MakeRect([120,27],66,55,edgecolor = 'cyan',linewidth = 1)
+rect5 = vis.MakeRect([62,49],152,114,edgecolor = 'm',linewidth = 5)
 rects1 = []
 rects1.append(rect1)
 rects1.append(rect2)
@@ -41,15 +42,27 @@ rectss.append(rects3)
 rectss.append(rects4)
 # print(rectss)
 
+rects = vis.Rects()
+rects.addRect(0,[67,40],147,14)
+rects.addRect(0,[87,130],93,18,edgecolor = 'w')
+rects.addRect(1,[56,63],189,188,edgecolor = 'g',linewidth = 3)
+rects.addRect(2,[120,27],66,55,edgecolor = 'cyan',linewidth = 1)
+rects.addRect(3,[62,49],152,114,edgecolor = 'm',linewidth = 5)
+
 # vis.showimgs(im1,im2,im1,im2, title = titles)
-# vis.showimgs(im1,im2,im3,im4, title = titles, rect = rectss)
+vis.showimgs(im1,im2,im3,im4, title = titles, rect = rects)
 
 
-# titles2 = titles + titles + titles + titles
-# vis.showimgs(im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4, title = titles)
+titles2 = titles + titles + titles + titles
+# titles3 = titles2+titles2+titles2+titles2+titles2+titles2+titles2+titles2+titles2+titles2
+# vis.showimgs(im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4,im1,im2,im3,im4, title = titles3)
 
 # vis.showimgs(im1,im2,im2,im2)
-vis.showimg(im2,title = 'cat')
+
+# vis.showimg(im1)
+# vis.showimg(im1,title = 'cat')
+
+# vis.showimgs(im1,im2,im3,im4, title = titles)
 
 
 
@@ -67,7 +80,7 @@ im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
 import matplotlib.pyplot as plt
 fig = plt.figure()
 ax = fig.add_subplot(1,1,1)
-rect = plt.Rectangle((0,0),100,100,fill=False, edgecolor = 'red',linewidth=1)
+rect = plt.Rectangle((67,40),147,14,fill=False, edgecolor = 'red',linewidth=1)
 ax.add_patch(rect)
 plt.imshow(im1) # 图像数组
 plt.show()
