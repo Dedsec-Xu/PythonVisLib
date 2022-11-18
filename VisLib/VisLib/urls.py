@@ -28,6 +28,7 @@ urlpatterns = [
     re_path(r'^$',  views.default),
     path('hello/', views.hello),
     path('show/<str:handlername>/', views.image),
+    path('showjs/<str:handlername>/', views.imagesjs),
     # re_path(r'^/static/image/(?P<path>.*)$', serve, {'document_root': './static/image/'}),
 ]
 
