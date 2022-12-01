@@ -5,7 +5,8 @@ import webbrowser
 import json
 import matplotlib
 import numpy as np
-
+import shutil
+import os
 import warnings
 
 import PIL
@@ -35,7 +36,7 @@ class PageJson():
 
    def saveJson(self,str):
       js = json.dumps(self.__dict__)
-      print(js)
+      # print(js)
       fh = open(str, 'w')
       fh.write(js)
       fh.close()
@@ -52,7 +53,6 @@ class DrawJson():
 
    def saveJson(self,str):
       js = json.dumps(self.__dict__)
-      print(js)
       fh = open(str, 'w')
       fh.write(js)
       fh.close()
@@ -71,19 +71,19 @@ class Rect():
       self.linewidth = r["linewidth"]
 
 
-      if 'edgecolor' in kwargs and 'c' in kwargs:
-         raise RuntimeError("don't use edge color and c at the same time!")
-      if 'edgecolor' in kwargs:
-         self.edgecolor = matplotlib.colors.to_hex(kwargs['edgecolor'])
-      elif 'c' in kwargs:
-         self.edgecolor = matplotlib.colors.to_hex(kwargs['c'])
-      else:
-         self.edgecolor = matplotlib.colors.to_hex('r')
-
-      if 'linewidth' in kwargs:
-         self.linewidth = kwargs['linewidth']
-      else:
-         self.linewidth = "1"
+      # if 'edgecolor' in kwargs and 'c' in kwargs:
+      #    raise RuntimeError("don't use edge color and c at the same time!")
+      # if 'edgecolor' in kwargs:
+      #    self.edgecolor = matplotlib.colors.to_hex(kwargs['edgecolor'])
+      # elif 'c' in kwargs:
+      #    self.edgecolor = matplotlib.colors.to_hex(kwargs['c'])
+      # else:
+      #    self.edgecolor = matplotlib.colors.to_hex('r')
+      #
+      # if 'linewidth' in kwargs:
+      #    self.linewidth = kwargs['linewidth']
+      # else:
+      #    self.linewidth = "1"
 
    def makejson(self):
       return json.dumps(self.__dict__)
@@ -97,12 +97,13 @@ class Rects():
            "linewidth": "1"}
 
       self.default = rectCheck(**kwargs,default =d)
+      # print(self.default)
 
    def addRect(self,num,xy, width, height, **kwargs):
       while self.amount <= num:
          self.rects.append([])
          self.amount += 1
-      self.rects[num].append(Rect(xy, width, height, **kwargs,default = self.default).makejson())
+      self.rects[num].append(Rect(xy, width, height, **kwargs, default = self.default).makejson())
 
 
 
@@ -240,16 +241,16 @@ def dotCheck(**kwargs):
       ret["type"] = kwargs['type']
       if len(ret["type"]) != 1:
          raise RuntimeError('dot type must be a character')
-      supported = ".,vo^<>12348sp*hH+xXDdc"
+      supported = ".,vo^<>12348sp*hH+xDdc"
       if ret["type"] not in supported:
-         raise RuntimeError('dot type must be in [.,vo^<>12348sp*hH+xXDdc]')
+         raise RuntimeError('dot type must be in [.,vo^<>12348sp*hH+xDdc]')
    elif 't' in kwargs:
       ret["type"] = kwargs['t']
       if len(ret["type"]) != 1:
          raise RuntimeError('dot type must be a character')
       supported = ".,vo^<>12348sp*hH+xDdc"
       if ret["type"] not in supported:
-         raise RuntimeError('dot type must be in [.,vo^<>12348sp*hH+xXDdc]')
+         raise RuntimeError('dot type must be in [.,vo^<>12348sp*hH+xDdc]')
    else:
       ret["type"] = defaultDict['type']
 
@@ -315,16 +316,33 @@ def dotCheck(**kwargs):
 
 class Line():
    def __init__(self, xy, xy2, **kwargs):
-      self.x = xy[0]
-      self.y = xy[1]
-      self.x2 = xy2[0]
-      self.y2 = xy2[1]
+      if "input_style" in kwargs:
+
+         if kwargs["input_style"] not in ["c","m"]:
+            raise RuntimeError('input_style must be in ["c","m"]')
+         if kwargs["input_style"] == "c":
+            self.x = xy[0]
+            self.y = xy[1]
+            self.x2 = xy2[0]
+            self.y2 = xy2[1]
+
+         if kwargs["input_style"] == "m":
+            self.x = xy[0]
+            self.y = xy2[0]
+            self.x2 = xy[1]
+            self.y2 = xy2[1]
+      else:
+         self.x = xy[0]
+         self.y = xy2[0]
+         self.x2 = xy[1]
+         self.y2 = xy2[1]
+
       self.type=[]
 
       default = kwargs['default']
-      print(default)
-      print(default)
-      print(default)
+      # print(default)
+      # print(default)
+      # print(default)
 
       r = lineCheck(**kwargs)
       self.type = r["type"]
@@ -383,7 +401,7 @@ class Line():
       #    self.size = self.default['size']
 
    def makejson(self):
-      print(json.dumps(self.__dict__))
+      # print(json.dumps(self.__dict__))
       return json.dumps(self.__dict__)
 
 
@@ -416,8 +434,8 @@ def lineCheck(**kwargs):
       typeindex = kwargs['t']
    else:
       typeindex = defaultDict['type']
-      print("typeindex = defaultDict['type']")
-   print(typeindex)
+   #    print("typeindex = defaultDict['type']")
+   # print(typeindex)
 
    if type(typeindex) == type('1'):
       supported = {'-': [],
@@ -603,8 +621,8 @@ class ImageHandler():
          if isinstance(o.scale,list):
             self.inputscale = -1
             if len(o.scale)!=len(self.imgs):
-               print("if len(o.scale)!=len(self.imglist)")
-               print(len(self.imgs))
+               # print("if len(o.scale)!=len(self.imglist)")
+               # print(len(self.imgs))
                raise RuntimeError('input override scale is not same length as the image array')
          else:
             self.inputscale = o.scale
@@ -769,7 +787,7 @@ class ImageHandler():
 
 
 def showimg(img, **kwargs):
-   print(kwargs)
+   # print(kwargs)
    if "title" in kwargs:
       kwargs["title"] = [kwargs["title"]]
 
@@ -793,3 +811,12 @@ def showimgs(*args, **kwargs):
 #       x = ImageHandler(img,1)
 #       handles.append(x.handle)
 #    return handles
+
+def recycleall():
+   input("Press anykey to clear all caches")
+   p1 = './static/image/'
+   p2 = './static/json/'
+   shutil.rmtree(p1)
+   os.mkdir(p1)
+   shutil.rmtree(p2)
+   os.mkdir(p2)
