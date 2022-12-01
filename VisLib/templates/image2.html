@@ -4,6 +4,256 @@
 		* {
 			font-family: Arial, sans-serif;
 		}
+        body {
+            {#background-image:url('https://source.unsplash.com/featured/2560x1440/?\%22cat\%22');#}
+            background-image:url('https://source.unsplash.com/featured/2560x1440/?\%22city\%22');
+            {#background-image:url('https://source.unsplash.com/featured/2560x1440/?\%22mountain\%22');#}
+            {#background-image:url('https://images.pexels.com/photos/2341290/pexels-photo-2341290.jpeg?auto=compress&cs=tinysrgb&w=1600');#}
+            {#background-size:cover#}
+
+
+            width:100%;
+            height:50%;
+            background-repeat:no-repeat；
+            background-size: 100% 100%;
+            background-size: cover;
+
+        }
+
+        .button::-moz-focus-inner{
+          border: 0;
+          padding: 0;
+        }
+
+        .button{
+          display: inline-block;
+          *display: inline;
+          zoom: 1;
+          padding: 6px 20px;
+          margin: 0;
+          cursor: pointer;
+          border: 1px solid #bbb;
+          overflow: visible;
+          font: bold 13px arial, helvetica, sans-serif;
+          text-decoration: none;
+          white-space: nowrap;
+          color: #555;
+
+          background-color: #ddd;
+          background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,1)), to(rgba(255,255,255,0)));
+          background-image: -webkit-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+          background-image: -moz-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+          background-image: -ms-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+          background-image: -o-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+          background-image: linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+
+          -webkit-transition: background-color .2s ease-out;
+          -moz-transition: background-color .2s ease-out;
+          -ms-transition: background-color .2s ease-out;
+          -o-transition: background-color .2s ease-out;
+          transition: background-color .2s ease-out;
+          background-clip: padding-box; /* Fix bleeding */
+          -moz-border-radius: 3px;
+          -webkit-border-radius: 3px;
+          border-radius: 3px;
+          -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+          -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+          box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+          text-shadow: 0 1px 0 rgba(255,255,255, .9);
+
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+
+        .button:hover{
+          background-color: #eee;
+          color: #555;
+        }
+
+        .button:active{
+          background: #e9e9e9;
+          position: relative;
+          top: 1px;
+          text-shadow: none;
+          -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+          -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+        }
+
+        .button[disabled], .button[disabled]:hover, .button[disabled]:active{
+          border-color: #eaeaea;
+          background: #fafafa;
+          cursor: default;
+          position: static;
+          color: #999;
+          /* Usually, !important should be avoided but here it's really needed :) */
+          -moz-box-shadow: none !important;
+          -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+          text-shadow: none !important;
+        }
+
+        /* Smaller buttons styles */
+
+        .button.small{
+          padding: 4px 12px;
+        }
+
+        /* Larger buttons styles */
+
+        .button.large{
+          padding: 12px 30px;
+          text-transform: uppercase;
+        }
+
+        .button.large:active{
+          top: 2px;
+        }
+
+        /* Colored buttons styles */
+
+        .button.green, .button.red, .button.blue {
+          color: #fff;
+          text-shadow: 0 1px 0 rgba(0,0,0,.2);
+
+          background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,0)));
+          background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+          background-image: -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+          background-image: -ms-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+          background-image: -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+          background-image: linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+        }
+
+        /* */
+
+        .button.green{
+          background-color: #57a957;
+          border-color: #57a957;
+        }
+
+        .button.green:hover{
+          background-color: #62c462;
+        }
+
+        .button.green:active{
+          background: #57a957;
+        }
+
+        /* */
+
+        .button.red{
+          background-color: #ca3535;
+          border-color: #c43c35;
+        }
+
+        .button.red:hover{
+          background-color: #ee5f5b;
+        }
+
+        .button.red:active{
+          background: #c43c35;
+        }
+
+        /* */
+
+        .button.blue{
+          background-color: #269CE9;
+          border-color: #269CE9;
+        }
+
+        .button.blue:hover{
+          background-color: #70B9E8;
+        }
+
+        .button.blue:active{
+          background: #269CE9;
+        }
+
+        /* */
+
+        .green[disabled], .green[disabled]:hover, .green[disabled]:active{
+          border-color: #57A957;
+          background: #57A957;
+          color: #D2FFD2;
+        }
+
+        .red[disabled], .red[disabled]:hover, .red[disabled]:active{
+          border-color: #C43C35;
+          background: #C43C35;
+          color: #FFD3D3;
+        }
+
+        .blue[disabled], .blue[disabled]:hover, .blue[disabled]:active{
+          border-color: #269CE9;
+          background: #269CE9;
+          color: #93D5FF;
+        }
+
+        /* Group buttons */
+
+        .button-group,
+        .button-group li{
+          display: inline-block;
+          *display: inline;
+          zoom: 1;
+        }
+
+        .button-group{
+          font-size: 0; /* Inline block elements gap - fix */
+          margin: 0;
+          padding: 0;
+          background: rgba(0, 0, 0, .1);
+          border-bottom: 1px solid rgba(0, 0, 0, .1);
+          padding: 7px;
+          -moz-border-radius: 7px;
+          -webkit-border-radius: 7px;
+          border-radius: 7px;
+        }
+
+        .button-group li{
+          margin-right: -1px; /* Overlap each right button border */
+        }
+
+        .button-group .button{
+          font-size: 13px; /* Set the font size, different from inherited 0 */
+          -moz-border-radius: 0;
+          -webkit-border-radius: 0;
+          border-radius: 0;
+        }
+
+        .button-group .button:active{
+          -moz-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+          -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+          box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+        }
+
+        .button-group li:first-child .button{
+          -moz-border-radius: 3px 0 0 3px;
+          -webkit-border-radius: 3px 0 0 3px;
+          border-radius: 3px 0 0 3px;
+        }
+
+        .button-group li:first-child .button:active{
+          -moz-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+          -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+          box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+        }
+
+        .button-group li:last-child .button{
+          -moz-border-radius: 0 3px 3px 0;
+          -webkit-border-radius: 0 3px 3px 0;
+          border-radius: 0 3px 3px 0;
+        }
+
+        .button-group li:last-child .button:active{
+          -moz-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+          -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+          box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+        }
 
         h2 {
             font-weight: bold;
@@ -25,16 +275,37 @@
 		{#}#}
 
         .flex-container > div {
-            background-color: lightcyan;
-            width: 300px;
+
+
+
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+
+            {#background-color: lightcyan;#}
+            {#width: 300px;#}
             margin: 5px;
             text-align: center;
             line-height: 75px;
             font-size: 5px;
+
+            {#flex-grow: 1;#}
         }
 
         canvas {
 			border: 1px solid black;
+
+
+
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+
+
 
             background-color: lightcyan;
             {##}
@@ -56,14 +327,7 @@
             title.appendChild(newContent);
 
 
-			var DEFAULT_ZOOM = .5;
-			var MAX_ZOOM = 3;
-			var MIN_ZOOM = .2;
-			var ZOOM_STEP = .1;
-            var CWIDTH = 300;
-            var CHEIGHT = 300;
 
-			var DRAW_POS = [CWIDTH/2, CHEIGHT/2];
 
 
             {#var canvas = document.createElement('canvas');#}
@@ -86,22 +350,89 @@
             var titlelist = jsonpath.titlelist;
             var imgcnt = imglist.length;
             var rectlist = jsonpath.rectlist;
+            var dotlist = jsonpath.dotlist;
+            var linelist = jsonpath.linelist;
+            var settingsj = jsonpath.override;
+            {#console.log(settingsj)#}
+            var settings = JSON.parse(settingsj)
+            {#console.log(settings)#}
+            var ALLOW_DRAG = settings.allowDrag
+            var ALLOW_ZOOM = true
 
-            {#console.log(rectlist);#}
-            {#console.log(rectlist[0]);#}
-            {#console.log(rectlist[0][0]);#}
-            {#var img1rect = JSON.parse(rectlist[0][0])#}
-            {##}
-            {#console.log(img1rect);#}
+            var DEFAULT_ZOOM = [];
+			var MAX_ZOOM = [];
+			var MAX_ZOOM_RATIO = 100;
+			var MIN_ZOOM_RATIO = .05;
+			var MIN_ZOOM = [];
+			var ZOOM_STEP = .1;
+            var CWIDTH = 300;
+            var CHEIGHT = 600;
+
+            if(settings.scalemode == "fixed"){
+                ALLOW_ZOOM = false
+                DEFAULT_ZOOM = settings.scale
+            }
+            {#console.log(settings.boxsize)#}
+            CWIDTH = settings.boxsize[0]
+            CHEIGHT = settings.boxsize[1]
+            ZOOM_STEP = .1*CWIDTH/300
+
+            if(settings.scalemode == "original"){
+                for (let i = 0; i < imglist.length; ++i) {
+                    DEFAULT_ZOOM.push(1)
+                    MAX_ZOOM.push(1)
+                    MIN_ZOOM.push(1)
+                }
+                ALLOW_ZOOM = false
+            }
+
+
+
+            if(settings.scalemode == "auto"){
+                for (let i = 0; i < imglist.length; ++i) {
+                    DEFAULT_ZOOM.push(1)
+                    MAX_ZOOM.push(MAX_ZOOM_RATIO)
+                    MIN_ZOOM.push(MIN_ZOOM_RATIO)
+                }
+                ALLOW_ZOOM = true
+            }
+
+            if(settings.scalemode == "given"){
+                for (let i = 0; i < imglist.length; ++i) {
+                    DEFAULT_ZOOM.push(settings.scale[i])
+                    MAX_ZOOM.push(MAX_ZOOM_RATIO*settings.scale[i])
+                    MIN_ZOOM.push(MIN_ZOOM_RATIO*settings.scale[i])
+                }
+                ALLOW_ZOOM = true
+            }
+
+            if(settings.scalemode == "autofixed"){
+                for (let i = 0; i < imglist.length; ++i) {
+                    DEFAULT_ZOOM.push(1)
+                    MAX_ZOOM.push(1)
+                    MIN_ZOOM.push(1)
+                }
+                ALLOW_ZOOM = false
+
+            }
+
+
+
+
+
+
+
+			var DRAW_POS = [CWIDTH/2, CHEIGHT/2];
+
 
 
             var canvaslist = [];
 
-            var scale = [];
-            for (let i = 0; i < imglist.length; ++i) {
+            {#var scale = [];#}
+            {#for (let i = 0; i < imglist.length; ++i) {#}
                 {#console.log(DEFAULT_ZOOM)#}
-                scale.push(DEFAULT_ZOOM);
-            }
+            {#    scale.push(DEFAULT_ZOOM[i]);#}
+            {#}#}
 
             {#var drawPos = DRAW_POS;#}
 
@@ -119,6 +450,18 @@
             var zoomInbS = [];
             var zoomOutbS = [];
             var resetZoombS = [];
+            var scale = [];
+
+
+
+            if(settings.scalemode != "auto" && settings.scalemode != "autofixed" ){
+                for (let i = 0; i < imglist.length; ++i) {
+                    {#console.log(DEFAULT_ZOOM)#}
+
+                    scale.push(DEFAULT_ZOOM[i]);
+                }
+            }
+
             for (let i = 0; i < imglist.length; ++i) {
                 {#console.log(imglist[i]);#}
                 var imgid = i.toString();
@@ -143,17 +486,21 @@
 
                 const newContent = document.createTextNode(titlelist[i]);
                 title.appendChild(newContent);
+                if(settings.titles){
 
-                document.getElementById("div_" + imgid).appendChild(title);
+                    document.getElementById("div_" + imgid).appendChild(title);
+                }
+
+
 
 
                 var p1 = document.createElement('p');
 
-                document.getElementById("div_" + imgid).appendChild(p1);
 
                 var resetPosb = document.createElement('button');
 
                 resetPosb.setAttribute('type', "button");
+                {#resetPosb.setAttribute('class', "green button");#}
                 resetPosb.setAttribute('id', "resetPos_" + imgid);
                 resetPosb.appendChild(document.createTextNode("Reset Position"));
 
@@ -162,25 +509,43 @@
                 var zoomInb = document.createElement('button');
 
                 zoomInb.setAttribute('type', "button");
+
+                {#zoomInb.setAttribute('class', "blue button");#}
                 zoomInb.setAttribute('id', "zoomIn___" + imgid);
                 zoomInb.appendChild(document.createTextNode("+"));
 
                 var zoomOutb = document.createElement('button');
 
                 zoomOutb.setAttribute('type', "button");
+
+                {#zoomOutb.setAttribute('class', "blue button");#}
                 zoomOutb.setAttribute('id', "zoomOut__" + imgid);
                 zoomOutb.appendChild(document.createTextNode("-"));
 
                 var resetZoomb = document.createElement('button');
 
                 resetZoomb.setAttribute('type', "button");
+
+                {#resetZoomb.setAttribute('class', "red button");#}
                 resetZoomb.setAttribute('id', "reseZoom_" + imgid);
                 resetZoomb.appendChild(document.createTextNode("Reset Zoom"));
 
-                p1.appendChild(resetPosb);
-                p1.appendChild(zoomInb);
-                p1.appendChild(zoomOutb);
-                p1.appendChild(resetZoomb);
+
+                if(settings.buttons){
+                    document.getElementById("div_" + imgid).appendChild(p1);
+
+                    if (ALLOW_DRAG){
+                        p1.appendChild(resetPosb);
+                    }
+
+                    if (ALLOW_ZOOM){
+                        p1.appendChild(zoomInb);
+                        p1.appendChild(zoomOutb);
+                        p1.appendChild(resetZoomb);
+                    }
+                }
+
+
 
                 resetPosS.push(resetPosb);
                 zoomInbS.push(zoomInb);
@@ -188,6 +553,7 @@
                 resetZoombS.push(resetZoomb);
             }
 
+            var PADDING = 20
             var imgobjs = []
             for (let i = 0; i < imglist.length; ++i) {
 
@@ -196,80 +562,165 @@
                 image.src = imgsrc;
                 imgobjs.push(image);
                 imgobjs[i].addEventListener("load", function(e) {
-                    loaded = true;
-                    console.log("/imagesource/image/"+imglist[i] + ".png"+"已完成加载");
+                    loaded[i] = true;
+                    if(settings.scalemode == "auto" || settings.scalemode == "autofixed" ){
+                        var scale1 =  (CWIDTH - PADDING) / imgobjs[i].width
+                        var scale2 =  (CHEIGHT - PADDING) / imgobjs[i].height
+                        {#console.log((CWIDTH - PADDING) )#}
+                        {#console.log(imgobjs[i].width)#}
+                        {#console.log(scale1)#}
+                        DEFAULT_ZOOM[i] = Math.min(scale1,scale2)
+                        scale[i] = DEFAULT_ZOOM[i]
+                    }
+
+                    {#console.log("/imagesource/image/"+imglist[i] + ".png"+"已完成加载");#}
                     drawCanvas(i);
                 }, false);
             }
+            {#console.log(DEFAULT_ZOOM)#}
+
+
+
+
+
+
+
+
+
+
 
             var contextlist = [];
+            function disableScrolling(){
+                var x=window.scrollX;
+                var y=window.scrollY;
+                window.onscroll=function(){window.scrollTo(x, y);};
+            }
 
+            function enableScrolling(){
+                window.onscroll=function(){};
+}
 
             for (let i = 0; i < imglist.length; ++i) {
 
                 var imgid = i.toString();
                 var cc = document.getElementById("myCanvas_" + imgid);
                 var context = cc.getContext("2d");
+                cc.style.border = settings.borders
                 cc.addEventListener("mousewheel", zoom, false);
                 cc.addEventListener("mousedown", setMouseDown, false);
                 cc.addEventListener("mouseup", setMouseUp, false);
                 cc.addEventListener("mousemove", move, false);
+                cc.addEventListener('mouseover',function(e){
+                    //在子元素上就启用滚轮
+                    disableScrolling()
+                    {#var id = getid(e)#}
+                    {#var aaa = getMousePos(document.getElementById("myCanvas_" + id), e)#}
+                    {##}
+                    {#console.log(aaa);#}
+                    {##}
+                    {#drawRoundDot(contextlist[id],#}
+                    {#    aaa.x,#}
+                    {#    aaa.y,#}
+                    {#    "",#}
+                    {#    "#0000ff",#}
+                    {#    20 * scale[id],#}
+                    {#    "1 px",#}
+                    {#    "#0000ff",#}
+                    {#    true#}
+                    {#);#}
+
+
+
+                })
+                cc.addEventListener('mouseleave',function(e){
+                    //在子元素上就启用滚轮
+                    enableScrolling()
+                })
                 contextlist.push(context)
 
             }
 
+            var loaded= [];
             for (let i = 0; i < imglist.length; ++i) {
-
+                loaded.push(false)
                 var imgid = i.toString();
-
 			    resetPosS[i].addEventListener("click", resetPos, false);
-                zoomInbS[i].addEventListener("click", zoomIn, false);
-                zoomOutbS[i].addEventListener("click", zoomOut, false);
+                zoomInbS[i].addEventListener("click", zoomIn2, false);
+                zoomOutbS[i].addEventListener("click", zoomOut2, false);
 			    resetZoombS[i].addEventListener("click", resetZoom, false);
             }
 
-            {#var resetPosS = [];#}
-            {#var zoomInbS = [];#}
-            {#var zoomOutbS = [];#}
-            {#var resetZoombS = [];#}
             var rects=[]
-
-            console.log(rectlist);
-            console.log(rectlist[0]);
-            console.log(rectlist[0][0]);
-            var img1rect = JSON.parse(rectlist[0][0])
-
-            console.log(img1rect);
 
             for (let i = 0; i < rectlist.length; ++i) {
                 var onerect_array = []
 
-                console.log("rectlist[" + i.toString()+"]");
+                {#console.log("rectlist[" + i.toString()+"]");#}
                 for (let j = 0; j < rectlist[i].length; ++j) {
-                    console.log(" var imgrect = JSON.parse(rectlist[" + i.toString()+"]["+ j.toString()+"]");
+                    {#console.log(" var imgrect = JSON.parse(rectlist[" + i.toString()+"]["+ j.toString()+"]");#}
                     var imgrect = JSON.parse(rectlist[i][j])
-
-                    {#console.log(imgrect);#}
-
-                    {#var randomcolor;#}
-                    {#if(j%3 == 1){#}
-                    {#    randomcolor = "#0000ff"#}
-                    {#}#}
-                    {#if(j%3 == 2){#}
-                    {#    randomcolor = "#f0ff0f"#}
-                    {#}#}
-                    {#if(j%3 == 0){#}
-                    {#    randomcolor = "#00ff00"#}
-                    {#}#}
-
-
                     var onerect = {x:imgrect.x, y:imgrect.y, w:imgrect.width, h:imgrect.height, edgecolor:imgrect.edgecolor, linewidth:imgrect.linewidth};
-                    console.log(onerect);
+                    {#console.log(onerect);#}
                     onerect_array.push(onerect)
-
-
                 }
                 rects.push(onerect_array)
+            }
+
+            var dots=[]
+            {#var rectlist = jsonpath.rectlist;#}
+            {#var dotlist = jsonpath.dotlist;#}
+            {#var linelist = jsonpath.linelist;#}
+
+            for (let i = 0; i < dotlist.length; ++i) {
+                var onedot_array = []
+                {#console.log("dots[" + i.toString()+"]");#}
+                for (let j = 0; j < dotlist[i].length; ++j) {
+                    {#console.log(" var imgdot = JSON.parse(rectlist[" + i.toString()+"]["+ j.toString()+"]");#}
+                    var imgdot = JSON.parse(dotlist[i][j])
+                    var onedot = {x:imgdot.x
+                        , y:imgdot.y
+                        , type:imgdot.type
+                        , color:imgdot.color
+                        , size:imgdot.size
+                        , label:imgdot.label
+                        , font:imgdot.font
+                        , textcolor:imgdot.textcolor
+                        , nooffset:imgdot.nooffset
+                        , str:imgdot.str
+                    };
+                    {#console.log(onedot);#}
+                    onedot_array.push(onedot);
+                }
+                dots.push(onedot_array);
+            }
+            {#console.log("dots");#}
+            {#console.log(dots);#}
+
+
+            var lines=[]
+            {#var rectlist = jsonpath.rectlist;#}
+            {#var linelist = jsonpath.linelist;#}
+            {#var linelist = jsonpath.linelist;#}
+
+            for (let i = 0; i < linelist.length; ++i) {
+                var oneline_array = [];
+                {#console.log("lines[" + i.toString()+"]");#}
+                for (let j = 0; j < linelist[i].length; ++j) {
+                    {#console.log(" var imgline = JSON.parse(rectlist[" + i.toString()+"]["+ j.toString()+"]");#}
+                    var imgline = JSON.parse(linelist[i][j]);
+                    var oneline = {
+                        x:imgline.x,
+                        y:imgline.y,
+                        x2:imgline.x2,
+                        y2:imgline.y2,
+                        type:imgline.type,
+                        color:imgline.color,
+                        size:imgline.size
+                    };
+                    {#console.log(oneline);#}
+                    oneline_array.push(oneline);
+                }
+                lines.push(oneline_array);
             }
 
 
@@ -280,36 +731,8 @@
 
 
 
-			{#var canvas = document.querySelector("#myCanvas");#}
-			{#var context = canvas.getContext("2d");#}
-
-			// Defaults
-			// var DRAW_POS = [0, 0];
-
-			// Buttons
-			{#var zoomInBtn = document.querySelector("#zoomIn");#}
-			{#zoomInBtn.addEventListener("click", zoomIn, false);#}
-			{#var zoomOutBtn = document.querySelector("#zoomOut");#}
-			{#zoomOutBtn.addEventListener("click", zoomOut, false);#}
-			{#var resetZoomBtn = document.querySelector("#resetZoom");#}
-			{#resetZoomBtn.addEventListener("click", resetZoom, false);#}
-			{#var resetPosBtn = document.querySelector("#resetPos");#}
-			{#resetPosBtn.addEventListener("click", resetPos, false);#}
-
-			// Image
-			var loaded = false;
 
 
-
-
-
-
-
-
-			{#image.addEventListener("load", function(e) {#}
-			{#	loaded = true;#}
-			{#	drawCanvas();#}
-			{#}, false);#}
 
 			// Draw the canvas
             {#var scale = DEFAULT_ZOOM;#}
@@ -317,7 +740,7 @@
                 {#console.log("drawCanvas("+id.toString()+")");#}
                 contextlist[id].fillStyle = "#FFFFFF";
 				contextlist[id].fillRect(0,0,canvaslist[id].width,canvaslist[id].height);
-				if (loaded) {
+				if (loaded[id]) {
 					drawImage(id);
 				}
 			}
@@ -337,12 +760,6 @@
 				var x = drawX[id] - (w / 2);
 				var y = drawY[id] - (h / 2);
 
-                {#console.log("imgx"+x.toString());#}
-                {#console.log("imgy"+y.toString());#}
-                {#console.log("imgw"+w.toString());#}
-                {#console.log("imgh"+h.toString());#}
-                {#contextlist[id].strokeStyle = "#000000";#}
-                {#contextlist[id].strokeRect(100, 100, 5, 5);#}
 
                 var basep =[];
                 basep.push(x);
@@ -350,102 +767,996 @@
 
 
 				contextlist[id].drawImage(imgobjs[id], x, y, w, h);
+                {#console.log(rects)#}
+                if(rects.length !== 0){
+                    if(rects[id]!=null) {
+                        for (let i = 0; i < rects[id].length; ++i) {
+                            var rects_this = rects[id][i];
+                            drawRect(id,rects_this,basep);
+                        }
+                    }
 
-                {#var leftdownhalf = {x:0,y:0,w:100,h:100, edgecolor:"#f0a456", linewidth:3}#}
-                {#drawRect(id,leftdownhalf,basep)#}
-                for (let i = 0; i < rects[id].length; ++i) {
-                    var rects_this = rects[id][i]
-                    {#console.log(rects_this);#}
-
-                    drawRect(id,rects_this,basep)
                 }
 
-			}
+                {#console.log(dots)#}
+                if(dots.length !== 0){
+                    if(dots[id]!=null) {
+                        for (let i = 0; i < dots[id].length; ++i) {
+                            var dots_this = dots[id][i];
+                            drawDot(id,dots_this,basep);
+                        }
+                    }
+                }
+
+
+                if(lines.length !== 0){
+                    if(lines[id]!=null) {
+                        for (let i = 0; i < lines[id].length; ++i) {
+                            var lines_this = lines[id][i];
+                            drawLine(id,lines_this,basep);
+                        }
+                    }
+                }
+            }
+
+            {#function getDashByStyle(type,size) {#}
+            {#    return di[type].map(item=>item*size);#}
+            {#}#}
+
+            function drawLine(id,lines_this,basep) {
+                var bx = basep[0];
+                var by = basep[1];
+                var x = bx + lines_this.x * scale[id];
+                var y = by + lines_this.y * scale[id];
+                var x2 = bx + lines_this.x2 * scale[id];
+                var y2 = by + lines_this.y2 * scale[id];
+                var type = lines_this.type;
+                var size = lines_this.size * scale[id];
+                var color = lines_this.color;
+                var dash = type.map(item=>item*size);
+                contextlist[id].beginPath();
+
+                contextlist[id].setLineDash(dash);
+                contextlist[id].moveTo(x, y);//线条开始位置
+                contextlist[id].lineTo(x2, y2);//线条经过点
+                {#contextlist[id].closePath();//结束绘制线条，不是必须的#}
+
+                contextlist[id].lineWidth = size;//设置线条宽度
+                contextlist[id].strokeStyle = color;//设置线条颜色
+                contextlist[id].stroke();//用于绘制线条
+
+                contextlist[id].setLineDash([]);
+            }
 
             function drawRect(id,rects_this,basep) {
                 var bx = basep[0];
                 var by = basep[1];
                 var w = rects_this.w * scale[id];
                 var h = -rects_this.h * scale[id];
-
                 var x = bx + rects_this.x * scale[id];
                 var y = by + rects_this.y * scale[id] - h;
-                {#var y = by + y1 - h;#}
                 contextlist[id].lineWidth  = rects_this.linewidth.toString();
-                console.log(rects_this.linewidth.toString()/scale[id]);
+                {#console.log(rects_this.linewidth.toString()/scale[id]);#}
                 contextlist[id].strokeStyle = rects_this.edgecolor;
                 contextlist[id].strokeRect(x, y, w, h);
 
             }
 
+            function drawDot(id,dots_this,basep) {
+                var bx = basep[0];
+                var by = basep[1];
+                var x = bx + dots_this.x * scale[id];
+                var y = by + dots_this.y * scale[id];
+                {#contextlist[id].lineWidth  = dots_this.linewidth.toString();#}
+                {#contextlist[id].strokeStyle = dots_this.edgecolor;#}
+                {#contextlist[id].strokeRect(x, y, w, h);#}
+                var size = 12;
+                var regex = /\d+px/;
+                var found = dots_this.font.match(regex);
+                var size2 = 12;
+                if(found!== null){
+                    if(found.length !== 0){
+                        size2 = parseInt(found[0].substr(0, found[0].length - 2));
+                    }
+                }
+
+                if (!isNaN(size2)){
+                    size = size2;
+                }
+                size *= scale[id];
+                var sizestr = dots_this.font.replace(/\d+px/, size.toString() + "px");
+                if(dots_this.type === "s"){
+                    drawRectDot(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset
+                    );
+                }else if(dots_this.type === "."){
+                    drawRoundDot(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset
+                    );
+                }else if(dots_this.type === "o"){
+                    drawRoundDoto(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset
+                    );
+                }else if(dots_this.type === "v"){
+                    {#var temptext = "v"#}
+                    drawTextDot(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        "▼"
+                    );
+                }else if(dots_this.type === "<"){
+                    drawTextDot2(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        "▼"
+                    );
+                }else if(dots_this.type === ">"){
+                    drawTextDot3(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        "▼"
+                    );
+                }else if(dots_this.type === "^"){
+                    drawTextDot4(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        "▼"
+                    );
+                }
+
+                else if(dots_this.type === "x"){
+                    drawTextDot5(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        "×",
+                        1.8
+                    );
+                }
+
+                else if(dots_this.type === "+"){
+                    drawTextDot5(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        "+",
+                        1.9
+                    );
+                }
+
+                else if(dots_this.type === "D"){
+                    drawTextDot5(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        "⬩",
+                        3
+                    );
+                }
+
+                else if(dots_this.type === "d"){
+                    drawTextDot6(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        "♦",
+                        1.6,
+                        0.3
+                    );
+                }
+
+                else if(dots_this.type === "p"){
+                    drawTextDot6(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        "⬟",
+                        1.3,
+                        0.33
+                    );
+                }
+
+                else if(dots_this.type === "*"){
+                    drawTextDot6(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        "★",
+                        1.3,
+                        0.33
+                    );
+                }
+
+                else if(dots_this.type === "h"){
+                    drawTextDot6(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        "⬢",
+                        1.3,
+                        0.35
+                    );
+                }
+
+                else if(dots_this.type === "H"){
+                    drawTextDot6(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        "⬣",
+                        1.3,
+                        0.35
+                    );
+                }
+
+                else if(dots_this.type === "8"){
+                    drawTextDot6(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        "⯃",
+                        1.35,
+                        0.37
+                    );
+                }
+
+                else if(dots_this.type === ","){
+                    drawPixelDot(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset
+                    );
+                }
+
+                else if(dots_this.type === "1"){
+                    drawYDot(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        0
+                    );
+                }
+
+                else if(dots_this.type === "2"){
+                    drawYDot(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        2
+                    );
+                }
+
+                else if(dots_this.type === "3"){
+                    drawYDot(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        3
+                    );
+                }
+
+                else if(dots_this.type === "4"){
+                    drawYDot(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        1
+                    );
+                }
+
+                else if(dots_this.type === "c"){
+                    drawTextDot6(contextlist[id],
+                        x,
+                        y,
+                        dots_this.label,
+                        dots_this.color,
+                        dots_this.size * scale[id],
+                        sizestr,
+                        dots_this.textcolor,
+                        dots_this.nooffset,
+                        dots_this.str,
+                        1.3,
+                        0.35
+                    );
+                }
+
+
+            }
+
+            function drawYDot(context, x, y, label, color, size, font, fontcolor,nooffset,idx) {
+                var radius = 0.5 * size;
+                var pointX = Math.round(x);
+                var pointY = Math.round(y);
+
+                var p1x = pointX + radius*Math.sin(idx * Math.PI /2 + 0)
+                var p1y = pointY + radius*Math.cos(idx * Math.PI /2 + 0)
+                var p2x = pointX + radius*Math.sin(idx * Math.PI /2 + Math.PI *2 / 3)
+                var p2y = pointY + radius*Math.cos(idx * Math.PI /2 + Math.PI *2 / 3)
+                var p3x = pointX + radius*Math.sin(idx * Math.PI /2 + Math.PI *4 / 3)
+                var p3y = pointY + radius*Math.cos(idx * Math.PI /2 + Math.PI *4/ 3)
+
+                context.beginPath();
+                context.moveTo(pointX, pointY);
+                context.lineTo(p1x, p1y);
+                context.lineTo(pointX, pointY);
+                context.lineTo(p2x, p2y);
+                context.lineTo(pointX, pointY);
+                context.lineTo(p3x, p3y);
+                context.lineTo(pointX, pointY);
+
+                context.lineWidth = radius/3;//设置线条宽度
+                context.strokeStyle = color;//设置线条颜色
+                context.stroke();
+
+
+                if (label) {
+                    var textX = Math.round(x);
+                    var textY;
+
+                    if(nooffset){
+                        textY = Math.round(pointY);
+                    }else{
+                        textY = Math.round(pointY - 3*radius);
+                    }
+
+
+                    context.font = font;
+                    context.fillStyle = fontcolor;
+                    context.textAlign = 'center';
+                    context.fillText(label, textX, textY);
+                }
+            }
+
+             function drawPixelDot(context, x, y, label, color, size, font, fontcolor,nooffset) {
+                drawRectDot(context,
+                        x,
+                        y,
+                        label,
+                        color,
+                        2.5,
+                        font,
+                        fontcolor,
+                        nooffset
+                    );
+            }
+
+             function drawRoundDot(context, x, y, label, color, size, font, fontcolor,nooffset) {
+                var radius = 0.5 * size;
+                var pointX = Math.round(x);
+                var pointY = Math.round(y);
+
+                context.beginPath();
+                context.fillStyle = color;
+                context.arc(pointX, pointY, radius, 0 * Math.PI, 2 * Math.PI);
+                context.fill();
+
+                if (label) {
+                    var textX = Math.round(x);
+                    var textY;
+
+                    if(nooffset){
+                        textY = Math.round(pointY);
+                    }else{
+                        textY = Math.round(pointY - 3*radius);
+                    }
+
+
+                    context.font = font;
+                    context.fillStyle = fontcolor;
+                    context.textAlign = 'center';
+                    context.fillText(label, textX, textY);
+                }
+            }
+
+
+
+            function drawRoundDoto(context, x, y, label, color, size, font, fontcolor,nooffset) {
+                var radius = 0.5 * size;
+                var pointX = Math.round(x);
+                var pointY = Math.round(y);
+
+                context.beginPath();
+
+                context.strokeStyle = color;
+                context.arc(pointX, pointY, radius, 0 * Math.PI, 2 * Math.PI);
+
+                context.lineWidth = radius/5;//设置线条宽度
+                context.strokeStyle = color;
+                context.stroke();
+                {#context.fill();#}
+
+                if (label) {
+                    var textX = Math.round(x);
+                    var textY;
+
+                    if(nooffset){
+                        textY = Math.round(pointY);
+                    }else{
+                        textY = Math.round(pointY - 3*radius);
+                    }
+
+
+                    context.font = font;
+                    context.fillStyle = fontcolor;
+                    context.textAlign = 'center';
+                    context.fillText(label, textX, textY);
+                }
+            }
+
+             function drawRectDot(context, x, y, label, color, size, font, fontcolor,nooffset) {
+                var radius = 0.5 * size;
+                var pointX = Math.round(x - radius);
+                var pointY = Math.round(y - radius);
+
+
+
+                context.beginPath();
+                context.fillStyle = color;
+                context.fillRect(pointX, pointY, size, size);
+                context.fill();
+
+
+                if (label) {
+                    var textX = Math.round(x);
+                    var textY;
+                    if(nooffset){
+                        textY = Math.round(pointY);
+                    }else{
+                        textY = Math.round(pointY - 3*radius);
+                    }
+
+
+                    context.font = font;
+                    context.fillStyle = fontcolor;
+                    {#console.log(fontcolor)#}
+                    context.textAlign = 'center';
+                    context.fillText(label, textX, textY);
+                }
+            }
+
+
+
+            function drawTextDot(context, x, y, label, color, size, font, fontcolor, nooffset,temptext) {
+
+                var radius = 1.5* size;
+                var pointX = Math.round(x);
+                var pointY = Math.round(y+0.35*radius);
+
+
+
+                context.font = radius + "px Arial";
+                context.fillStyle = color;
+                context.textAlign = 'center';
+                context.fillText(temptext, pointX, pointY);
+
+
+
+                if (label) {
+                    var textX = Math.round(x);
+                    var textY;
+                    if(nooffset){
+                        textY = Math.round(pointY);
+                    }else{
+                        textY = Math.round(pointY - 3*radius);
+                    }
+
+
+                    context.font = font;
+                    context.fillStyle = fontcolor;
+                    context.textAlign = 'center';
+                    context.fillText(label, textX, textY);
+                }
+            }
+
+            function drawTextDot2(context, x, y, label, color, size, font, fontcolor, nooffset,temptext) {
+
+                var radius = 1.5* size;
+                var pointX = Math.round(x-0.35*radius);
+                var pointY = Math.round(y);
+
+
+                context.restore();
+
+                context.font = radius + "px Arial";
+                context.fillStyle = color;
+                context.textAlign = 'center';
+                context.save()
+                context.translate(pointX,pointY)
+                context.rotate(90 * Math.PI / 180);
+                context.fillText(temptext, 0, 0);
+                context.restore();
+
+
+
+                if (label) {
+                    var textX = Math.round(x);
+                    var textY;
+                    if(nooffset){
+                        textY = Math.round(pointY);
+                    }else{
+                        textY = Math.round(pointY - 3*radius);
+                    }
+
+
+                    context.font = font;
+                    context.fillStyle = fontcolor;
+                    context.textAlign = 'center';
+                    context.fillText(label, textX, textY);
+                }
+            }
+
+
+            function drawTextDot3(context, x, y, label, color, size, font, fontcolor, nooffset,temptext) {
+
+                {#console.log("drawTextDot")#}
+
+                var radius = 1.5* size;
+                var pointX = Math.round(x+0.35*radius);
+                var pointY = Math.round(y);
+
+
+                context.restore();
+
+                context.font = radius + "px Arial";
+                context.fillStyle = color;
+                context.textAlign = 'center';
+                context.save()
+                context.translate(pointX,pointY)
+                context.rotate(-90 * Math.PI / 180);
+                context.fillText(temptext, 0, 0);
+                context.restore();
+
+
+
+                if (label) {
+                    var textX = Math.round(x);
+                    var textY;
+                    if(nooffset){
+                        textY = Math.round(pointY);
+                    }else{
+                        textY = Math.round(pointY - 3*radius);
+                    }
+
+
+                    context.font = font;
+                    context.fillStyle = fontcolor;
+                    context.textAlign = 'center';
+                    context.fillText(label, textX, textY);
+                }
+            }
+
+            function drawTextDot4(context, x, y, label, color, size, font, fontcolor, nooffset,temptext) {
+
+
+                var radius = 1.5* size;
+                var pointX = Math.round(x);
+                var pointY = Math.round(y-0.35*radius);
+
+
+                context.restore();
+
+                context.font = radius + "px Arial";
+                context.fillStyle = color;
+                context.textAlign = 'center';
+                context.save()
+                context.translate(pointX,pointY)
+                context.rotate(180 * Math.PI / 180);
+                context.fillText(temptext, 0, 0);
+                context.restore();
+
+
+
+                if (label) {
+                    var textX = Math.round(x);
+                    var textY;
+                    if(nooffset){
+                        textY = Math.round(pointY);
+                    }else{
+                        textY = Math.round(pointY - 3*radius);
+                    }
+
+
+                    context.font = font;
+                    context.fillStyle = fontcolor;
+                    console.log(fontcolor)
+                    context.textAlign = 'center';
+                    context.fillText(label, textX, textY);
+                }
+            }
+
+
+            function drawTextDot5(context, x, y, label, color, size, font, fontcolor, nooffset,temptext,rad_scale) {
+
+                {#console.log("drawTextDot")#}
+
+                var radius = rad_scale * size;
+                var pointX = Math.round(x);
+                var pointY = Math.round(y+0.35*radius);
+
+
+
+                context.font = radius + "px Arial";
+                console.log(context.font)
+                context.fillStyle = color;
+                console.log(fontcolor)
+                context.textAlign = 'center';
+                context.fillText(temptext, pointX, pointY);
+
+
+
+                if (label) {
+                    var textX = Math.round(x);
+                    var textY;
+                    if(nooffset){
+                        textY = Math.round(pointY);
+                    }else{
+                        textY = Math.round(pointY - 3*radius);
+                    }
+
+
+                    context.font = font;
+                    context.fillStyle = fontcolor;
+                    console.log(fontcolor)
+                    context.textAlign = 'center';
+                    context.fillText(label, textX, textY);
+                }
+            }
+
+
+            function drawTextDot6(context, x, y, label, color, size, font, fontcolor, nooffset,temptext,rad_scale,offset) {
+
+                {#console.log("drawTextDot")#}
+
+                var radius = rad_scale * size;
+                var pointX = Math.round(x);
+                var pointY = Math.round(y+offset*radius);
+
+
+
+                context.font = radius + "px Arial";
+                context.fillStyle = color;
+                context.textAlign = 'center';
+                context.fillText(temptext, pointX, pointY);
+
+
+
+                if (label) {
+                    var textX = Math.round(x);
+                    var textY;
+                    if(nooffset){
+                        textY = Math.round(pointY);
+                    }else{
+                        textY = Math.round(pointY - 3*radius);
+                    }
+
+
+                    context.font = font;
+                    context.fillStyle = fontcolor;
+                    context.textAlign = 'center';
+                    context.fillText(label, textX, textY);
+                }
+            }
+
+
+
+
 			// Set the zoom with the mouse wheel
 			function zoom(e) {
-                {#console.log("zoom("+getid(e)+")");#}
-
-				if (e.wheelDelta > 0) {
-					zoomIn(e);
-				}
-				else {
-					zoomOut(e);
-				}
+                if(ALLOW_ZOOM){
+                    if (e.wheelDelta > 0) {
+                        zoomIn(e);
+                    }
+                    else {
+                        zoomOut(e);
+                    }
+                }
 			}
+
+
+            function getMousePos(canvas, evt) {
+              var rect = canvas.getBoundingClientRect(), // abs. size of element
+                scaleX = canvas.width / rect.width,    // relationship bitmap vs. element for x
+                scaleY = canvas.height / rect.height;  // relationship bitmap vs. element for y
+
+              return {
+                x: (evt.clientX - rect.left) * scaleX,   // scale mouse coordinates after they have
+                y: (evt.clientY - rect.top) * scaleY     // been adjusted to be relative to element
+              }
+            }
 
 			// Zoom in
 			function zoomIn(e) {
-                var id = getid(e);
+                if(ALLOW_ZOOM){
+                    var id = getid(e);
+                    var aaa = getMousePos(document.getElementById("myCanvas_" + id), e)
+                    var s1 = scale[id]
+                    var s2 = scale[id] + ZOOM_STEP
+                    var x_diff = aaa.x - (aaa.x - drawX[id])*(s2/s1)
+                    var y_diff = aaa.y - (aaa.y - drawY[id])*(s2/s1)
 
-                {#console.log("zoomIn("+getid(e)+")");#}
+                    drawX[id] = x_diff
+                    drawY[id] = y_diff
+                    console.log(aaa);
 
-				if (scale[id] < MAX_ZOOM) {
-					scale[id]  += ZOOM_STEP;
-					drawCanvas(getid(e));
-				}
+
+
+                    if (scale[id] < MAX_ZOOM[id]) {
+                        scale[id]  += ZOOM_STEP;
+
+                        drawCanvas(getid(e));
+                        {#drawRoundDot(contextlist[id],#}
+                        {#    aaa.x,#}
+                        {#    aaa.y,#}
+                        {#    "",#}
+                        {#    "#00f0f0",#}
+                        {#    10 * scale[id],#}
+                        {#    "1 px",#}
+                        {#    "#0000ff",#}
+                        {#    true#}
+                        {#);#}
+                    }
+                }
+			}
+
+            function zoomIn2(e) {
+                if(ALLOW_ZOOM){
+                    var id = getid(e);
+                    {#var aaa = getMousePos(document.getElementById("myCanvas_" + id), e)#}
+                    {#var s1 = scale[id]#}
+                    {#var s2 = scale[id] + ZOOM_STEP#}
+                    {#var x_diff = aaa.x - (aaa.x - drawX[id])*(s2/s1)#}
+                    {#var y_diff = aaa.y - (aaa.y - drawY[id])*(s2/s1)#}
+                    {##}
+                    {#drawX[id] = x_diff#}
+                    {#drawY[id] = y_diff#}
+                    {#console.log(aaa);#}
+
+
+
+                    if (scale[id] < MAX_ZOOM[id]) {
+                        scale[id]  += ZOOM_STEP;
+
+                        drawCanvas(getid(e));
+                        {#drawRoundDot(contextlist[id],#}
+                        {#    aaa.x,#}
+                        {#    aaa.y,#}
+                        {#    "",#}
+                        {#    "#00f0f0",#}
+                        {#    10 * scale[id],#}
+                        {#    "1 px",#}
+                        {#    "#0000ff",#}
+                        {#    true#}
+                        {#);#}
+                    }
+                }
 			}
 
 			// Zoom out
 			function zoomOut(e) {
-                var id = getid(e);
+                if(ALLOW_ZOOM){
+                    var id = getid(e);
 
-                console.log("zoomOut("+getid(e)+")");
-                if (scale[id]  > MIN_ZOOM) {
-					scale[id]  -= ZOOM_STEP;
-					drawCanvas(getid(e));
-				}
+                    var aaa = getMousePos(document.getElementById("myCanvas_" + id), e)
+
+                    var s1 = scale[id]
+                    var s2 = scale[id] - ZOOM_STEP
+                    var x_diff = aaa.x - (aaa.x - drawX[id])*(s2/s1)
+                    var y_diff = aaa.y - (aaa.y - drawY[id])*(s2/s1)
+
+                    drawX[id] = x_diff
+                    drawY[id] = y_diff
+
+                    console.log(aaa);
+
+                    console.log("zoomOut("+getid(e)+")");
+                    if (scale[id]  > MIN_ZOOM[id]) {
+                        scale[id]  -= ZOOM_STEP;
+                        drawCanvas(getid(e));
+                        {#drawRoundDot(contextlist[id],#}
+                        {#    aaa.x,#}
+                        {#    aaa.y,#}
+                        {#    "",#}
+                        {#    "#f000f0",#}
+                        {#    10 * scale[id],#}
+                        {#    "1 px",#}
+                        {#    "#0000ff",#}
+                        {#    true#}
+                        {#);#}
+                    }
+                }
+			}
+
+            function zoomOut2(e) {
+                if(ALLOW_ZOOM){
+                    var id = getid(e);
+
+
+                    console.log("zoomOut("+getid(e)+")");
+                    if (scale[id]  > MIN_ZOOM[id]) {
+                        scale[id]  -= ZOOM_STEP;
+                        drawCanvas(getid(e));
+                        {#drawRoundDot(contextlist[id],#}
+                        {#    aaa.x,#}
+                        {#    aaa.y,#}
+                        {#    "",#}
+                        {#    "#f000f0",#}
+                        {#    10 * scale[id],#}
+                        {#    "1 px",#}
+                        {#    "#0000ff",#}
+                        {#    true#}
+                        {#);#}
+                    }
+                }
 			}
 
 			// Reset the zoom
 			function resetZoom(e) {
-                var id = getid(e);
 
-                console.log("resetZoom("+getid(e)+")");
-                scale[id]  = DEFAULT_ZOOM;
-				drawCanvas(getid(e));
+
+                if(ALLOW_ZOOM){
+                     var id = getid(e);
+
+                    console.log("resetZoom("+getid(e)+")");
+                    scale[id]  = DEFAULT_ZOOM[id];
+                    drawCanvas(getid(e));
+                }
+
 			}
 
 			// Reset the position
 			function resetPos(e) {
-                var id = getid(e);
 
-                console.log("resetPos("+getid(e)+")");
-                drawX[id] = DRAW_POS[0];
-                drawY[id] = DRAW_POS[1];
-				drawCanvas(getid(e));
+                if(ALLOW_DRAG){
+                    var id = getid(e);
+
+                    console.log("resetPos("+getid(e)+")");
+                    drawX[id] = DRAW_POS[0];
+                    drawY[id] = DRAW_POS[1];
+                    drawCanvas(getid(e));
+                }
+
 			}
 
 			// Toggle mouse status
 			function setMouseDown(e) {
-				console.log("setMouseDown("+getid(e)+")");
-                mouseDown = true;
-				mousePos = [e.x, e.y];
+
+
+                if(ALLOW_DRAG){
+                    console.log("setMouseDown("+getid(e)+")");
+                    mouseDown = true;
+                    mousePos = [e.x, e.y];
+
+                }
+
 			}
 			function setMouseUp(e) {
-                console.log("setMouseUp("+getid(e)+")");
-				mouseDown = false;
+
+
+                if(ALLOW_DRAG){
+                    console.log("setMouseUp("+getid(e)+")");
+				    mouseDown = false;
+                }
+
 			}
 
 			// Move
 			function move(e) {
-				if (mouseDown) {
+				if (mouseDown && ALLOW_DRAG) {
                     var id = getid(e);
                     console.log("move("+getid(e)+")");
 					var dX = 0, dY = 0;
